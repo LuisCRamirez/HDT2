@@ -8,10 +8,10 @@ public class Traductor implements InterfazTrans {
 	String operaciones;
 	
 	@Override
-	public int Calcular(String ops) {
+	public int Calcular(String texto) {
 		int resultado = 0; 
 		
-		String[] separar = ops.split(" "); //Instruccion para separar cada caracter entre cada espacion que haya
+		String[] separar = texto.split(" "); //Instruccion para separar cada caracter entre cada espacion que haya
 		for(int i=0; i<separar.length; i++){ 
 			try{
 				pila.Push(Integer.parseInt(separar[i])); //Si se puede convertir es porque es un num
